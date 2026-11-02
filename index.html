@@ -4,7 +4,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <tittle>Home Page - Intokozo Yemfundo Project</tittle>
+        <meta name="description" content="Intokozo Yemfundo Project founded 2016 to empower disadvantaged township learners through spelling bees, tutoring and youth development programmes in South Africa.">
+        <meta name="keyword" content="Intokozo Yemfundo Project, township education NGO, disadvantaged learners, youth empowerment, South Africa education">
+        <meta name="author" content="Owethu Mashinini">
+        <title>Home Page - Intokozo Yemfundo Project</title>
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <!-- the body of the webpage-->
@@ -12,12 +15,12 @@
         <header>
     <img src="images/WhatsApp Image 2026-08-13 at 22.21.42.jpeg" alt="Intokozo Yemfundo Logo" class="logo">
     <nav>
-    <a href="Home.html">Home</a>
-    <a href="About us.html">About us</a>
-    <a href="Products and Services.html">Products and Services</a>
-    <a href="Gallery.html">Gallery</a>
-    <a href="Contact.html">Contact</a>
-    <a href="News/Blogs.html">News/Blogs</a>
+    <a href="index.html">Home</a>
+    <a href="aboutus.html">About us</a>
+    <a href="services.html">Products and Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="news.html">News/Blogs</a>
 </nav>
         </header>
         <main>
@@ -40,5 +43,28 @@
         </main>
         
         <footer>&copy:ST10512787#DISD1_Intokozo Yemfundo </footer>
+        <footer>
+            <p>&copy; 2026 Intokozo Yemfundo Project. All rights reserved.</p>
+            <p id="datetime"></p>
+        </footer>
+        <script>
+            //date and time update on the footer//
+            function updateDateTime(){
+                const now = new Date();
+                const options = {
+                    weekday:"long",
+                    year:"numeric",
+                    month:"long",
+                    day:"numeric",
+                    hour:"2-digit",
+                    minutes:"2-digits",
+                    second:"2-digit"
+                };
+                document.getElementById("datetime").textContent = now.toLocaleDateString("en-US", options);
+            }
+            //update date time immedietely//
+            updateDateTime();
+            setInterval(updateDateTime, 1000);
+            </script>
     </body>
 </html>

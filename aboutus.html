@@ -4,32 +4,43 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=devive-width, initial-scale=1.0">
-        <tittle>About us</tittle>
+        <meta name="description" content="Intokozo Yemfundo Project founded 2016 to empower disadvantaged township learners through spelling bees, tutoring and youth development programmes in South Africa.">
+        <meta name="keyword" content="Intokozo Yemfundo Project, township education NGO, disadvantaged learners, youth empowerment, South Africa education">
+        <meta name="author" content="Owethu Mashinini">
+        <title>About us</title>
         <link rel="stylesheet" href="css/styles.css">
+        <script src="JavaScript" defer></script>
     </head>
     <body>
     <!-- the body of the webpage-->
 <header>
     <img src="images/WhatsApp Image 2026-08-13 at 22.21.42.jpeg" alt="Intokozo Yemfundo Logo" class=""logo>
     <nav>
-    <a href="Home.html">Home</a>
-    <a href="About us.html">About us</a>
-    <a href="Products and Services.html">Products and Services</a>
-    <a href="Gallery.html">Gallery</a>
-    <a href="Contact.html">Contact</a>
-    <a href="News/Blogs.html">News/Blogs</a>
+    <a href="index.html">Home</a>
+    <a href="aboutus.html">About us</a>
+    <a href="services.html">Products and Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="news.html">News/Blogs</a>
 </nav>
         </header>
         <main>
             <section class="hero">
                 <div>
             <h1><u><i></i>Welcome to Intokozo Yemfundo Project</i></u></h1>
-            <h3>Bringing joy to education</h3>
+            <h2>Bringing joy to education</h2>
+            <h3>Founded in 2019</h3>
             <p>Intokozo Yemfundo Project was established in the year 2016 by females who had passion to pass on the knowledge to other disadvantaged township learners</p>
             <p>In 2022 Intokozo Yemfundo Project hosted a spelling bee competition where 4 different township schools competed in the spelling bee. Children won different prices but only one school won a big prize which was a sum of money</p>
+           <h3>Our Goal</h3>
             <p>The goal of the spelling bee was to help children with learning how to spell and improve their vocabulary as some children cannot spell or have a problem when it comes to English</p>
             <p>The goal of Intokozo Yemfundo Project is instilling an attitude of excellence and achievement early in the learning career. We aim to enrich and empower young minds that hold the future.</p>
+                </div>
+            <button class="accordion">Our Impact</button>
+            <div class="panel" style="display:none;">
+                <p>150 learners assisted in 2022 Spelling Bee.</p>
             </div>
+            
             <img 
             src="images/IMG-20220911-WA0025.jpg" style="width:1500px; height:500px;"
             srcset="images/IMG-20220911-WA0025-small.jpg 480w, images/IMG-20220911-WA0025.jpg 1024w"
@@ -39,5 +50,36 @@
         </main>
 
         <footer>&copy:ST10512787#DISD1_Intokozo Yemfundo </footer>
+        <footer>
+            <p>&copy; 2026 Intokozo Yemfundo Project. All rights reserved.</p>
+            <p id="datetime"></p>
+        </footer>
+        <script>
+            //date and time update on the footer//
+            function updateDateTime(){
+                const now = new Date();
+                const options = {
+                    weekday:"long",
+                    year:"numeric",
+                    month:"long",
+                    day:"numeric",
+                    hour:"2-digit",
+                    minutes:"2-digits",
+                    second:"2-digit"
+                };
+                document.getElementById("datetime").textContent = now.toLocaleDateString("en-US", options);
+            }
+            //update date time immedietely//
+            updateDateTime();
+            setInterval(updateDateTime, 1000);
+            </script>
+<script>
+document.querySelectorAll(".accordion").forEach(btn=>{
+  btn.addEventListener("click", function(){
+    let panel = this.nextElementSibling;
+    panel.style.display = panel.style.display==="block" ? "none" : "block";
+  });
+});
+</script>
     </body>
 </html>
